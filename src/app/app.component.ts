@@ -7,13 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'daysofangular';
-  public name = 'Hh';
   public user = {
-    name: 'hoang',
-    age: 21,
+    name: 'Hh',
+    age: 15,
   };
-
-  public logUserName(): void {
-    console.log(this.user.name);
+  public plusAge(age: any): number {
+    console.log('+1');
+    return age + 1;
+  }
+  public minusAge(age: any): number {
+    console.log('-1');
+    return age - 1;
   }
 }

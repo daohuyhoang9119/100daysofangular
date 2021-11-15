@@ -1,22 +1,6 @@
-<br />
-<h1>Your name will change when you type on the input below {{ name }}</h1>
-<input type="text" [(ngModel)]="name" />
-<app-hello></app-hello>
-<p>name: {{ user.name }}</p>
-<p>age: {{ user.age }}</p>
-<br />
-<input type="text" [value]="user.name" />
-<br />
-<button (click)="logUserName()">Click me to get user name</button>
-<!-- sẽ đc parse thành HTMLInputElement{
-  type: 'text',
-  value: 'adds',
-  attributes: [],
-  ....
-} -->
+<app-hello [name]="user.name" *ngIf="user.age >= 18"></app-hello>
+<div *ngIf="user.age < 18">You are too young to see this content</div>
 
-<!-- toString() khi display 1 gia tri nao do, string interpolation -->
-
-<br />
-<br />
-<app-user-card></app-user-card>
+<button (click)="user.age = user.age - 1">-</button>
+<span>Age: {{ user.age }}</span>
+<button (click)="user.age = user.age + 1">+</button>
