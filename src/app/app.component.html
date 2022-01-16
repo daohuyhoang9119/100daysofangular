@@ -1,11 +1,25 @@
-<app-hello [name]="user.name" *ngIf="user.age >= 18; else under18"></app-hello>
-<!-- <div *ngIf="user.age < 18">You are too young to see this content</div> -->
-<ng-template #under18>
-  <div>
-    <h3>You are too young to see this content</h3>
-  </div>
-</ng-template>
-
-<button (click)="user.age = user.age - 1">-</button>
-<span>Age: {{ user.age }}</span>
-<button (click)="user.age = user.age + 1">+</button>
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} - {{ user.id }} - {{ user.phone }}
+  </li>
+</ul>
+<app-progress-bar
+  [progress]="15"
+  [backgroundColor]="'#9e9e9e'"
+  [progressColor]="'#2e8b57'"
+></app-progress-bar>
+<app-progress-bar
+  [progress]="80"
+  [backgroundColor]="'#9e9e9e'"
+  [progressColor]="'red'"
+></app-progress-bar>
+<!-- 
+    for(let st of users){}
+    - $implicit: item Implicit Context Variable
+    - index
+    - count: do dai cua list array
+    - first: true neu nhu item do la item dau tien trong array
+    - last: true neu nhu item do la item cuoi cung
+    - even: true neu nhu item do la item vi tri chan
+    - odd: true neu nhu item do la item vi tri le
+-->
