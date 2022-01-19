@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'daysofangular';
-
+  public name: string = 'Angular' + VERSION.major;
+  public checked: boolean = true;
   public users = [
     {
       id: 1,
@@ -248,4 +249,5 @@ export class AppComponent {
     console.log('-1');
     return age - 1;
   }
+  public doSomething() {}
 }

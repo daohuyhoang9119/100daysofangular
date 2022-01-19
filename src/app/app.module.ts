@@ -12,9 +12,10 @@ import { VersionChildComponent } from './version-child/version-child.component';
 import { VersionParentComponent } from './version-parent/version-parent.component';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
-  declarations: [AppComponent, HelloComponent, HiComponent, UserCardComponent, ProgressBarComponent, VersionChildComponent, VersionParentComponent, AuthorListComponent, AuthorDetailComponent], //nơi để khai báo component cho cái module này
+  declarations: [AppComponent, HelloComponent, HiComponent, UserCardComponent, ProgressBarComponent, VersionChildComponent, VersionParentComponent, AuthorListComponent, AuthorDetailComponent, ToggleComponent], //nơi để khai báo component cho cái module này
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
